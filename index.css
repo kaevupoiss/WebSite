@@ -1,0 +1,81 @@
+#sbtn img,
+#mbtn img {
+    height: 32px;
+    width: 32px;
+    -webkit-filter: invert(60%);
+    filter: invert(60%);
+}
+
+.hbtn {
+    cursor: pointer;
+    border: none;
+    background-color: #111;
+    height: 32px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+}
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    display: inline-grid;
+    grid-auto-columns: 32px 1fr 32px;
+    justify-items: center;
+}
+
+.header h2 {
+    color: #999;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    grid-column: 2 / 3;
+}
+
+.header #mbtn {
+    grid-column: 1 / 2;
+}
+
+.header #sbtn {
+    grid-column: 3 / 4;
+}
+
+.menu a,
+.menu h2 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #999;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover, .offcanvas a:focus{
+    color: #EEE;
+}
+
+#mainwrapper {
+    transition: 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+    .menu {padding-top: 15px;}
+    .menu a {font-size: 18px;}
+}
