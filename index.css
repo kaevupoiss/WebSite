@@ -10,7 +10,6 @@
     cursor: pointer;
     border: none;
     background-color: #111;
-    height: 32px;
 }
 
 body {
@@ -39,6 +38,7 @@ body {
     display: inline-grid;
     grid-auto-columns: 32px 1fr 32px;
     justify-items: center;
+    align-items: center;
 }
 
 .header h2 {
