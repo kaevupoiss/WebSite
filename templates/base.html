@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{% block title %}{% endblock %} - Mikroskeem</title>
+    {% block head %}{% endblock %}
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="../static/js/index.js"></script>
+    <div class="wrapper">
+      <div class="menu" id="menu">
+        <h2>MENU</h2>
+        <a href="{{ url_for('home_page') }}">HOME</a>
+        <a href="{{ url_for('challenges_page') }}">CHALLENGES</a>
+        <a href="{{ url_for('leaderboards_page') }}">LEADERBOARDS</a>
+        <a href="{{ url_for('forum_page') }}">FORUM</a>
+        <a href="{{ url_for('rules_page') }}">RULES</a>
+        <a href="{{ url_for('staff_page') }}">STAFF</a>
+        <a href="{{ url_for('store_page') }}">STORE</a>
+      </div> <!--menu-->
+      <div class="mainwrapper" id="mainwrapper">
+        <div class="header">
+          <button onclick="menuFun()" class="hbtn" id="mbtn"><img src="../static/img/menu.png"></button>
+          <h2>{% block title2 %}{% endblock %}</h2>
+          <button onclick="searchFun()" class="hbtn" id="sbtn"><img src="../static/img/search.png"></button>
+        </div>
+        {% block content %}{% endblock %}
+      </div> <!--mainwrapper-->
+    </div> <!--wrapper-->
+  </body>
+</html>
