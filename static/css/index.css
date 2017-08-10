@@ -1,7 +1,8 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: #EEE;
 }
 
 #mainwrapper {
@@ -14,6 +15,18 @@ body {
     width: 32px;
     -webkit-filter: invert(60%);
     filter: invert(60%);
+    transition: 0.3s;
+}
+
+#sbtn img:hover,
+#mbtn img:hover {
+  -webkit-filter: invert(85%);
+  filter: invert(85%);
+}
+
+#sbtn img:focus,
+#mbtn img:focus {
+  outline: 0;
 }
 
 .hbtn {
@@ -47,7 +60,8 @@ body {
     width: 100%;
     background-color: #111;
     display: inline-grid;
-    grid-auto-columns: 32px 1fr 32px;
+    grid-template-columns: 32px 1fr 32px;
+    -ms-grid-columns: 32px 1fr 32px;
     justify-items: center;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -101,6 +115,9 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     grid-column: 2 / 3;
+    -ms-grid-column: 2 3;
+    transition: 0.3s;
+    cursor: default;
 }
 
 .header h2:hover {
@@ -109,10 +126,12 @@ body {
 
 .header #mbtn {
     grid-column: 1 / 2;
+    -ms-grid-column: 1 2;
 }
 
 .header #sbtn {
     grid-column: 3 / 4;
+    -ms-grid-column: 3 4;
 }
 
 .menu a,
@@ -129,7 +148,36 @@ body {
     color: #EEE;
 }
 
-@media screen and (max-height: 450px) {
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.rules {
+  text-align: center;
+  max-width: 1080px;
+  margin: auto;
+  background-color: #FFF;
+  padding: 50px 15px 15px;
+  -webkit-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.33);
+  box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.33);
+  height: 100%;
+}
+
+.rules p {
+  max-width: 720px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.rules h3 {
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+@media screen and (max-height: 480px) {
     .menu {padding-top: 15px;}
     .menu a {font-size: 18px;}
 }
+
+@media screen and (min-width: 720px) {}
