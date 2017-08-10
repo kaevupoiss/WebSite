@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} - Mikroskeem</title>
     {% block head %}{% endblock %}
     <link href="../static/css/index.css" rel="stylesheet" type="text/css" />
@@ -25,7 +25,7 @@
           <button onclick="menuFun()" class="hbtn" id="mbtn"><img src="../static/img/menu.png"></button>
           <h2>{% block title2 %}{% endblock %}</h2>
           <button onclick="searchFun()" class="hbtn" id="sbtn"><img src="../static/img/search.png"></button>
-        </div>
+        </div> <!--header-->
         {% block content %}{% endblock %}
       </div> <!--mainwrapper-->
     </div> <!--wrapper-->
